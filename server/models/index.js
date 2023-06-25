@@ -19,7 +19,6 @@ if (config.use_env_variable) {
     config.password,
     config,
   );
-  db.Sequelize = Sequelize;
 }
 
 fs.readdirSync(__dirname)
@@ -46,5 +45,6 @@ Object.keys(db).forEach((modelName) => {
 });
 
 db.sequelize = sequelize;
+db.Sequelize = Sequelize;
 
 module.exports = db;
